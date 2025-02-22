@@ -13,16 +13,16 @@ fi
 # Default variables
 mysql_db="dashboard"
 mysql_user="dashboarduser"
-mysql_password="password"
+mysql_password="letsgocash"
 
 app_name="Dashboard"
-fqdn="dash.controlpanel.gg"
-app_url="https://dash.controlpanel.gg"
-pterodactyl_url=""
-pterodactyl_token=""
+fqdn="mgr.novahost.tech"
+app_url="https://mgr.novahost.tech"
+pterodactyl_url="https://panel.novahost.tech"
+pterodactyl_token="ptla_KKIPql3QuzNxwxwEAeDxTAV4Q60wZfEkqtvxp0cbrkB"
 
 # installation toggles
-configure_letsencrypt=false
+configure_letsencrypt=true
 
 # Visual and input
 info() {
@@ -130,9 +130,10 @@ check_os_comp() {
     case "$OS" in
     ubuntu)
         [ "$OS_VER_MAJOR" == "20" ] && SUPPORTED=true
+        [ "$OS_VER_MAJOR" == "24" ] && SUPPORTED=true
         ;;
     *)
-        SUPPORTED=false
+        SUPPORTED=true
         ;;
     esac
 
