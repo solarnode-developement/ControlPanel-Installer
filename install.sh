@@ -234,7 +234,7 @@ case "$OS" in
       [ "$OS_VER_MAJOR" == "8" ] && SUPPORTED=true
     ;;
     *)
-        SUPPORTED=false
+        SUPPORTED=true
     ;;
 esac
 
